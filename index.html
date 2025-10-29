@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Renno — Tehnologie Inovatoare</title>
+  <meta name="description" content="Renno — soluții și idei de tehnologie inovatoare pentru viitor." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0a0a0a;
+      --accent-red: #e63946;
+      --accent-blue: #1d4ed8;
+      --muted: #4b5563;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--accent-blue);
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    nav a:hover { color: var(--accent-red); }
+    .hero {
+      max-width: 900px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 0 16px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 16px;
+      color: var(--accent-blue);
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .btn {
+      background: var(--accent-red);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 20px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn:hover { background: #c92a3b; }
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 16px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: var(--accent-blue);
+      margin-bottom: 12px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+    .feature {
+      padding: 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    .feature strong { color: var(--accent-red); }
+    iframe {
+      width: 100%;
+      height: 360px;
+      border: none;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      border-top: 1px solid #e5e7eb;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header { flex-direction: column; }
+      nav { margin-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Renno</div>
+    <nav>
+      <a href="#despre">Despre</a>
+      <a href="#video">Video</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Tehnologie Inovatoare pentru un Viitor Inteligent</h1>
+    <p>Renno dezvoltă idei și soluții simple, eficiente și inteligente pentru o lume digitală în continuă schimbare.</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contactează-ne</button>
+  </section>
+
+  <section id="despre">
+    <h2>Despre Renno</h2>
+    <p>Renno este un proiect dedicat inovației tehnologice, concentrat pe simplitate, eficiență și impact. Scopul nostru este să aducem tehnologia mai aproape de oameni și să oferim soluții care inspiră progresul.</p>
+    <div class="features">
+      <div class="feature">
+        <strong>Inovație Constantă</strong>
+        <p>Explorăm tehnologii emergente pentru a transforma ideile în realitate.</p>
+      </div>
+      <div class="feature">
+        <strong>Design Curat</strong>
+        <p>Minimalismul este în centrul filosofiei noastre — claritate, funcționalitate și estetică.</p>
+      </div>
+      <div class="feature">
+        <strong>Tehnologie pentru Oameni</strong>
+        <p>Dezvoltăm soluții care simplifică viața și optimizează munca zilnică.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <h2>Clipuri YouTube</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    <p style="color:var(--muted);margin-top:8px">Mai multe clipuri vor fi adăugate în curând.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Pentru colaborări, întrebări sau propuneri, ne poți scrie oricând.</p>
+    <p><a href="mailto:mitum7309@gmail.com" style="color:var(--accent-blue);font-weight:600">mitum7309@gmail.com</a></p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Renno — Tehnologie Inovatoare
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
